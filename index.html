@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RICH </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #d43737; 
+            --dark-red: #8B0000;
+            --cream: #c66237ea; 
+            --dark: #222222;  
+            --light-gold: #f5be90;
+        }
+        
+        body {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .brand-header {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px 0;
+            border-bottom: 2px solid var(--light-gold);
+            border-top: 2px solid var(--light-gold);
+        }
+        
+        .logo {
+            font-size: 4rem;
+            font-weight: bold;
+            color: var(--dark-red);
+            margin: 0;
+            letter-spacing: 2px;
+        }
+        
+        .slogan {
+            font-style: italic;
+            color: var(--gold);
+            margin-top: 5px;
+            font-size: 1.2rem;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+            border-top: 4px solid var(--gold);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 180px;
+            object-fit: contain;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .product-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .product-title {
+            color: var(--dark-red);
+            font-size: 1.2rem;
+            margin: 10px 0;
+            min-height: 60px;
+        }
+        
+        .product-price {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: var(--gold);
+            margin: 15px 0;
+        }
+        
+        .contact-section {
+            background-color: var(--dark);
+            color: white;
+            padding: 50px 0;
+            margin-top: 50px;
+        }
+        
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-info, .social-media {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info h3, .social-media h3 {
+            color: var(--gold);
+            margin-top: 0;
+            border-bottom: 2px solid var(--gold);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            color: var(--light-gold);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .logo {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="brand-header">
+            <h1 class="logo">RICH</h1>
+            <p class="slogan">Si Sabe Rico, es Rich</p>
+        </div>
+        
+        <div class="products-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img src="https://web.macpollo.com/app01/352.png" alt="Pechuga de pollo" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Pechuga de Pollo</h3>
+                    <div class="product-price">$12.500 Lb</div>
+                </div>
+            </div>
+            
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="https://web.macpollo.com/app01/368.png" alt="Pernil Mixto" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Pernil Mixto</h3>
+                    <div class="product-price">$4.560 Lb</div>
+                </div>
+            </div>
+            
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="https://web.macpollo.com/app01/225.png" alt="Ala de pollo" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Ala de Pollo</h3>
+                    <div class="product-price">$7.900 Lb</div>
+                </div>
+            </div>
+            
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <img src="https://web.macpollo.com/app01/288.png" alt="Colombina" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Colombina</h3>
+                    <div class="product-price">$11.850 Lb</div>
+                </div>
+            </div>
+            
+            <!-- Producto 5 -->
+            <div class="product-card">
+                <img src="https://web.macpollo.com/app01/138.png" alt="Pernil" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Pernil</h3>
+                    <div class="product-price">$8.100 Lb</div>
+                </div>
+            </div>
+            
+            <!-- Producto 6 -->
+            <div class="product-card">
+                <img src="https://web.macpollo.com/app01/385.png" alt="Pierna Pernil" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Pierna Pernil</h3>
+                    <div class="product-price">$7.300 Lb</div>
+                </div>
+            </div>
+            
+            <!-- Producto 7 (Puedes agregar más productos según necesites) -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/8B0000/FFFFFF?text=Producto+7" alt="Producto 7" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Producto Adicional 1</h3>
+                    <div class="product-price">$0.000 Lb</div>
+                </div>
+            </div>
+            
+            <!-- Producto 8 -->
+            <div class="product-card">
+                <img src="https://via.placeholder.com/400x300/D4AF37/222222?text=Producto+8" alt="Producto 8" class="product-image">
+                <div class="product-content">
+                    <h3 class="product-title">Producto Adicional 2</h3>
+                    <div class="product-price">$0.000 Lb</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección de Contacto y Redes Sociales -->
+    <section class="contact-section">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contacto</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Direccion : Carrera 16E #32B-91 </p>
+                <p><i class="fas fa-phone"></i> Teléfono: 300 3815035</p>
+                <p><i class="fas fa-envelope"></i> Email: richproductos@gmail.com</p>
+                <p><i class="fas fa-clock"></i> Horario: Lunes a Sabado 90:00 - 20:00</p>
+            </div>
+            
+            <div class="social-media">
+                <h3>Síguenos</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" aria-label="WhatsApp"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p>Siguenos para descubrir nuestras promociones</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
